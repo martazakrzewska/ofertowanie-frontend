@@ -1,1 +1,45 @@
-<p>This is the partial for view 1.</p>
+<div ng-controller="View1Ctrl as ctrl">
+
+    <!--View1Ctrl ctrl = new View1Ctrl();-->
+    <input type="text" ng-model="ctrl.szukanyCustomer">
+    <input type="button" ng-click="ctrl.pobierzDane()" value="Baton">
+    <br>
+    {{ctrl.zmienna}}
+    <br>
+    {{ctrl.szukanyCustomer}}
+
+    {{$rootScope.customers}}
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Nazwa firmy</th>
+                <th scope="col">Adres</th>
+                <th scope="col">Numer telefonu</th>
+                <th scope="col">Nip</th>
+                <th scope="col">Oferty</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="el in customers">
+                <td>
+                    {{el.name}}
+                </td>
+                <td>
+                    {{el.adress}}
+                </td>
+                <td>
+                    {{el.nip}}
+                </td>
+                <td>
+                    {{el.phoneNumber}}
+                </td>
+                <td>
+                    {{el.phoneNumber}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

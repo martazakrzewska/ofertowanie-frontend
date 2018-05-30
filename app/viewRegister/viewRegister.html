@@ -1,0 +1,41 @@
+<div ng-controller="ViewRegisterCtrl as ctrl">
+    <div class="row">
+        <div class="col-md-3">
+            <label for="login">Login:</label>
+        </div>
+        <div class="col-md-5">
+            <input class="form-control" type="text" id="login" ng-model="ctrl.registerUser.login">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label for="name">Name:</label>
+        </div>
+        <div class="col-md-5">
+            <input class="form-control" type="text" id="name" ng-model="ctrl.registerUser.name">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label for="password">Password:</label>
+        </div>
+        <div class="col-md-5">
+            <input class="form-control" type="password" id="password" ng-model="ctrl.registerUser.password">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label for="password-confirm">Password confirmation:</label>
+        </div>
+        <div class="col-md-5">
+            <input class="form-control" type="password" id="password-confirm" ng-model="ctrl.registerUser.passwordconfirm">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-5">
+            <input class="form-control" type="button" ng-click="ctrl.sendRegisterForm()" value="Login">
+        </div>
+    </div>
+</div>

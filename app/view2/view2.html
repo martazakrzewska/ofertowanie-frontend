@@ -1,5 +1,24 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div ng-controller="View2Ctrl as ctrl">
+  <form name="product-form" ng-submit="ctrl.dodajCustomera()">
+    <div class="form-group">
+      <label for="name">Nazwa firmy</label>
+      <input class="form-control" ng-model="ctrl.customerDto.name" id="name"/>
+    </div>
+    <div class="form-group">
+      <label for="adress">Adres:</label>
+      <input class="form-control" ng-model="ctrl.customerDto.adress" id="adress">
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">phoneNumber:</label>
+      <input class="form-control" ng-model="ctrl.customerDto.phoneNumber" id="phoneNumber">
+    </div>
+    <div class="form-group">
+      <label for="nip">nip:</label>
+      <input class="form-control" ng-model="ctrl.customerDto.nip" id="nip">
+    </div>
+    <button class="btn btn-primary" type="submit">Save Product</button>
+  </form>
+
+  <input type="button" value="Wyslij" ng-click="ctrl.dodajCustomera()">
+  <br>
+</div>
